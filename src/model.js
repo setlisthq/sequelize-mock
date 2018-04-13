@@ -70,6 +70,7 @@ function fakeModel (name, defaults, opts) {
 	this._defaults = defaults || {};
 	
 	this.tableName = this.options.tableName || (this.options.freezeTableName ? name : Utils.pluralize(name));
+	this.prototype = {}
 	
 	/**
 	 * The Model's copy of the Instance class used to build instances
